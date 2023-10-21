@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.cardview.widget.CardView
+import kotlinx.android.synthetic.main.activity_technology_page.nametext
 
 class technologyPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +17,8 @@ class technologyPage : AppCompatActivity() {
         val java = findViewById<CardView>(R.id.javaapp)
         val youtubebtn = findViewById<Button>(R.id.youtube)
 
+        val name = intent.getStringExtra(MainActivity.KEY)
+        nametext.text = "Welcome "+ name.toString()
 
 
         android.setOnClickListener{
